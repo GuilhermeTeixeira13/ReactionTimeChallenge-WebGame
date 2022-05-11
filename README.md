@@ -2,18 +2,16 @@
 Trabalho Prático da UC de PW da UBI. 
 
 ------------------------------------------------------------------------------------------------------
-Login
+## Login
 
 
-Modos (3 Tentativas): 
-  Igual ao do AL.
-  Fundo de alguma cor.
+## Modos (3 Tentativas): 
+  Igual ao do AL.<br>
+  Fundo de alguma cor.<br>
   Ao ouvir um som.
 
-Retirar média do tempo, e o respetivo modo jogado.
-
-Fornecer ao utilizador alguns dados estatisticos:
-  Histórico de tempos pessoais em determinado modo jogo.
+## Fornecer ao utilizador alguns dados estatisticos:
+  Histórico de tempos pessoais em determinado modo jogo.<br>
   Classificação local do jogador (conta a melhor média), conforme a sua localização (Utilizando API 
   permite saber a sua região).
   
