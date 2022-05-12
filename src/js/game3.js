@@ -1,34 +1,37 @@
-var clickedTime, createdTime, reactionTime, timeOut, random, JogoIniciado;
+var clickedTime, createdTime, reactionTime, timeOut, JogoIniciado;
 
 const btnGame3 = document.getElementById('startGame3');
 
 btnGame3.addEventListener('click', () => {
   btnGame2.style.display = 'none';
   document.getElementById('game3Header').style.display = "none";
-
   const box = document.getElementById('game3');
   box.style.display = 'block';
 });
 
 function makeSoundGame3() {
   JogoIniciado = new Date();
-  random = getRandomArbitrary(3000, 7000);
+
+  var random = getRandomArbitrary(3000, 7000);
   console.log("Tempo até o som aparecer: " + random);
   timeOut = setTimeout(mostraSom, random);
 }
 
 function mostraSom() {
-  document.getElementById("divbox3").style.display = 'block';
+  createdTime = new Date();
+
   var audio = new Audio('../sound/beep.mp3');
   audio.volume = 0.05;
   audio.play();
-  createdTime = new Date();
+
+  document.getElementById("divbox3").style.display = 'block';
 }
 
 function divClickGame3() {
   clickedTime = new Date();
-
   reactionTime = (clickedTime - createdTime) / 1000;
+  console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
+
   document.getElementById("reactionTime3").innerHTML = reactionTime + "ms";
   document.getElementById("divbox3").style.display = 'none';
 

@@ -1,20 +1,22 @@
-var clickedTime, createdTime, reactionTime;
+var clickedTime, createdTime, reactionTime, JogoIniciado, timeOut;
 
 const btnGame1 = document.getElementById('startGame1');
 
 btnGame1.addEventListener('click', () => {
   btnGame1.style.display = 'none';
   document.getElementById('game1Header').style.display = "none";
-
   const box = document.getElementById('game1');
   box.style.display = 'block';
 });
 
 function makeboxGame1() {
+  JogoIniciado = new Date();
+
   randomshape();
+
   var random = getRandomArbitrary(3000, 7000);
-  console.log(random);
-  setTimeout(apareceFiguraNaTela, random);
+  console.log("Tempo até o som aparecer: " + random);
+  timeOut = setTimeout(apareceFiguraNaTela, random);
 }
 
 function randomshape() {
@@ -41,13 +43,33 @@ function randomshape() {
 }
 
 function apareceFiguraNaTela() {
-  document.getElementById("divbox1").style.display = 'block';
   createdTime = new Date();
+  document.getElementById("divbox1").style.display = 'block';
+}
+
+function mudaClicouCedo() {
+  document.getElementById("ClicouCedo").innerHTML = "";
+}
+
+function demasiadoCedoGame1() {
+  ClickCedo = new Date();
+
+  if (ClickCedo - JogoIniciado != 0) { // Depois de o jogo é iniciado após se acertar na resposta, ClickCedo - JogoIniciado = 0, pois JogoIniciado > ClickCedo
+    console.log("Clicou demasiado cedo.");
+
+    document.getElementById("ClicouCedo").innerHTML = "Ciclou Cedo!!! -> Restarting";
+    setTimeout(mudaClicouCedo, 2000);
+
+    clearTimeout(timeOut);
+    makeboxGame1();
+  }
 }
 
 function divClickGame1() {
   clickedTime = new Date();
   reactionTime = (clickedTime - createdTime) / 1000;
+  console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
+
   document.getElementById("reactionTime1").innerHTML = reactionTime + "ms";
   document.getElementById("divbox1").style.display = 'none';
 
