@@ -1,11 +1,25 @@
-#divbox {
+#divbox1 {
   width: 200px;
   height: 200px;
   background-color: blue;
   display: none;
 }
 
-#divgame {
+#divbox2 {
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  display: none;
+}
+
+#divbox3 {
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  display: none;
+}
+
+#divgame1, #divgame2, #divgame3 {
   width: 800px;
   height: 500px;
   border: 2px black solid;
@@ -13,5 +27,13 @@
 }
 
 #game1 {
+  display: none;
+}
+
+#game2 {
+  display: none;
+}
+
+#game3 {
   display: none;
 }

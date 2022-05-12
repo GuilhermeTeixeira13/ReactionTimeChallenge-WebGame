@@ -7,24 +7,49 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/game.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
 
   <h1>ReactionTimeChallenge</h1>
 
-  <h2 id="game1Header">Game 1</h2>
-  <button onclick="makebox()" id="startGame1">Start</button>
 
+  <h2 id="game1Header">Game 1</h2>
+  <button onclick="makeboxGame1()" id="startGame1">Start</button>
   <div id="game1">
-    <p>Tempo de reação: <span id="reactionTime"><span></span></span></p>
-    <div id="divgame">
-      <div id="divbox" onclick="divClick()"></div>
+    <p>Tempo de reação: <span id="reactionTime1"><span></span></span></p>
+    <div id="divgame1">
+      <div id="divbox1" onclick="divClickGame1()"></div>
     </div>
   </div>
 
+
+
+  <h2 id="game2Header">Game 2</h2>
+  <button onclick="makeboxGame2()" id="startGame2">Start</button>
+  <div id="game2">
+    <p>Tempo de reação: <span id="reactionTime2"><span></span></span></p>
+    <div id="divgame2">
+      <div id="divbox2" onclick="divClickGame2()"></div>
+    </div>
+  </div>
+
+
+
+  <h2 id="game3Header">Game 3</h2>
+  <button onclick="makeSoundGame3()" id="startGame3">Start</button>
+  <div id="game3">
+    <p>Tempo de reação: <span id="reactionTime3"><span></span></span></p>
+    <div id="divgame3">
+      <div id="divbox3" onclick="divClickGame3()"></div>
+    </div>
+  </div>
+
+
+
   <script src="../js/game1.js"></script>
+  <script src="../js/game2.js"></script>
+  <script src="../js/game3.js"></script>
 </body>
 
 </html>

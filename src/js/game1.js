@@ -1,20 +1,19 @@
-var clickedTime, createdTime, reactionTime, record = 99999;
+var clickedTime, createdTime, reactionTime;
 
-const btn = document.getElementById('startGame1');
+const btnGame1 = document.getElementById('startGame1');
 
-btn.addEventListener('click', () => {
-  // 👇️ hide button
-  btn.style.display = 'none';
+btnGame1.addEventListener('click', () => {
+  btnGame1.style.display = 'none';
   document.getElementById('game1Header').style.display = "none";
 
-  // 👇️ show div
   const box = document.getElementById('game1');
   box.style.display = 'block';
 });
 
-function makebox() {
+function makeboxGame1() {
   randomshape();
   var random = getRandomArbitrary(3000, 7000);
+  console.log(random);
   setTimeout(apareceFiguraNaTela, random);
 }
 
@@ -24,12 +23,12 @@ function randomshape() {
   codColor = Math.random();
   codColor = codColor * 4;
   codColor = Math.floor(codColor);
-  document.getElementById("divbox").style.backgroundColor = color[codColor];
+  document.getElementById("divbox1").style.backgroundColor = color[codColor];
 
   var randomBorderRadius;
   randomBorderRadius = getRandomArbitrary(0, 150);
   randomBorderRadius = Math.floor(randomBorderRadius);
-  document.getElementById("divbox").style.borderRadius = randomBorderRadius + "px";
+  document.getElementById("divbox1").style.borderRadius = randomBorderRadius + "px";
 
   var RandommarginLeft, RandommarginTop;
   RandommarginLeft = getRandomArbitrary(0, 600);
@@ -37,22 +36,22 @@ function randomshape() {
   RandommarginTop = getRandomArbitrary(0, 300);
   RandommarginTop = Math.floor(RandommarginTop);
 
-  document.getElementById("divbox").style.marginTop = RandommarginTop + "px";
-  document.getElementById("divbox").style.marginLeft = RandommarginLeft + "px";
+  document.getElementById("divbox1").style.marginTop = RandommarginTop + "px";
+  document.getElementById("divbox1").style.marginLeft = RandommarginLeft + "px";
 }
 
 function apareceFiguraNaTela() {
-  document.getElementById("divbox").style.display = 'block';
+  document.getElementById("divbox1").style.display = 'block';
   createdTime = new Date();
 }
 
-function divClick() {
+function divClickGame1() {
   clickedTime = new Date();
   reactionTime = (clickedTime - createdTime) / 1000;
-  document.getElementById("reactionTime").innerHTML = reactionTime + "ms";
-  document.getElementById("divbox").style.display = 'none';
+  document.getElementById("reactionTime1").innerHTML = reactionTime + "ms";
+  document.getElementById("divbox1").style.display = 'none';
 
-  makebox();
+  makeboxGame1();
 }
 
 function getRandomArbitrary(min, max) {
