@@ -1,0 +1,17 @@
+#divbox {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  display: none;
+}
+
+#divgame {
+  width: 800px;
+  height: 500px;
+  border: 2px black solid;
+  margin: auto;
+}
+
+#game1 {
+  display: none;
+}

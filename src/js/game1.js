@@ -1,5 +1,17 @@
 var clickedTime, createdTime, reactionTime, record = 99999;
 
+const btn = document.getElementById('startGame1');
+
+btn.addEventListener('click', () => {
+  // 👇️ hide button
+  btn.style.display = 'none';
+  document.getElementById('game1Header').style.display = "none";
+
+  // 👇️ show div
+  const box = document.getElementById('game1');
+  box.style.display = 'block';
+});
+
 function makebox() {
   randomshape();
   var random = getRandomArbitrary(3000, 7000);
@@ -40,10 +52,6 @@ function divClick() {
   document.getElementById("reactionTime").innerHTML = reactionTime + "ms";
   document.getElementById("divbox").style.display = 'none';
 
-  if (reactionTime < record) {
-    record = reactionTime;
-    document.getElementById("recordTime").innerHTML = record + "ms !!!";
-  }
   makebox();
 }
 
