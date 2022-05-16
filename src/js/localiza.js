@@ -5,8 +5,7 @@ navigator.geolocation.getCurrentPosition(
   },
   function errorCallback(error) {
     console.log(error)
-  },
-  { maximumAge: Infinity, timeout: 0, enableHighAccuracy: true }
+  }
 );
 
 function displayLocation(latitude, longitude) {
