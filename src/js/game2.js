@@ -36,8 +36,8 @@ function mudaFundo() {
   createdTime = new Date();
 }
 
-function mudaClicouCedo() {
-  document.getElementById("ClicouCedo").innerHTML = "";
+function mudaClicouCedo2() {
+  document.getElementById("ClicouCedo2").innerHTML = "";
 }
 
 function demasiadoCedoGame2() {
@@ -46,8 +46,8 @@ function demasiadoCedoGame2() {
   if (ClickCedo - JogoIniciado != 0) { // Depois de o jogo é iniciado após se acertar na resposta, ClickCedo - JogoIniciado = 0, pois JogoIniciado > ClickCedo
     console.log("Clicou demasiado cedo.");
 
-    document.getElementById("ClicouCedo").innerHTML = "Ciclou Cedo!!! -> Restarting";
-    setTimeout(mudaClicouCedo, 2000);
+    document.getElementById("ClicouCedo2").innerHTML = "Ciclou Cedo!!! -> Restarting";
+    setTimeout(mudaClicouCedo2, 2000);
 
     clearTimeout(timeOut);
     makeboxGame2();

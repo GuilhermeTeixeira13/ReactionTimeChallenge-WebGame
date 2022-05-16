@@ -46,8 +46,8 @@ function divClickGame3() {
   makeSoundGame3();
 }
 
-function mudaClicouCedo() {
-  document.getElementById("ClicouCedo").innerHTML = "";
+function mudaClicouCedo3() {
+  document.getElementById("ClicouCedo3").innerHTML = "";
 }
 
 function demasiadoCedoGame3() {
@@ -56,8 +56,8 @@ function demasiadoCedoGame3() {
   if (ClickCedo - JogoIniciado != 0) { // Depois de o jogo é iniciado após se acertar na resposta, ClickCedo - JogoIniciado = 0, pois JogoIniciado > ClickCedo
     console.log("Clicou demasiado cedo.");
 
-    document.getElementById("ClicouCedo").innerHTML = "Ciclou Cedo!!! -> Restarting";
-    setTimeout(mudaClicouCedo, 2000);
+    document.getElementById("ClicouCedo3  ").innerHTML = "Ciclou Cedo!!! -> Restarting";
+    setTimeout(mudaClicouCedo3, 2000);
 
     clearTimeout(timeOut);
     makeSoundGame3();

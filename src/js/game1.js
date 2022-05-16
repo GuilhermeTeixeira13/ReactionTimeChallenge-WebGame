@@ -51,8 +51,8 @@ function apareceFiguraNaTela() {
   document.getElementById("divbox1").style.display = 'block';
 }
 
-function mudaClicouCedo() {
-  document.getElementById("ClicouCedo").innerHTML = "";
+function mudaClicouCedo1() {
+  document.getElementById("ClicouCedo1").innerHTML = "";
 }
 
 function demasiadoCedoGame1() {
@@ -61,8 +61,8 @@ function demasiadoCedoGame1() {
   if (ClickCedo - JogoIniciado < random && ClickCedo - JogoIniciado != 0) { // Depois de o jogo é iniciado após se acertar na resposta, ClickCedo - JogoIniciado = 0, pois JogoIniciado > ClickCedo
     console.log("Clicou demasiado cedo.");
 
-    document.getElementById("ClicouCedo").innerHTML = "Ciclou Cedo!!! -> Restarting";
-    setTimeout(mudaClicouCedo, 2000);
+    document.getElementById("ClicouCedo1").innerHTML = "Ciclou Cedo!!! -> Restarting";
+    setTimeout(mudaClicouCedo1, 2000);
 
     clearTimeout(timeOut);
     makeboxGame1();
