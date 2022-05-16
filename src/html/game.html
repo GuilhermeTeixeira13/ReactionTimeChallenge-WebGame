@@ -13,10 +13,10 @@
 
   <h1>ReactionTimeChallenge</h1>
 
+  <button onclick="makeboxGame1()" id="startGame1">Start Tests</button>
 
-  <h2 id="game1Header">Game 1</h2>
-  <button onclick="makeboxGame1()" id="startGame1">Start</button>
   <div id="game1">
+    <h2 id="game1Header">Game 1</h2>
     <p>Tempo de reação: <span id="reactionTime1"><span></span></span></p>
     <p id="ClicouCedo"></p>
     <div id="divgame1" onclick="demasiadoCedoGame1()">
@@ -25,10 +25,8 @@
   </div>
 
 
-
-  <h2 id="game2Header">Game 2</h2>
-  <button onclick="makeboxGame2()" id="startGame2">Start</button>
   <div id="game2">
+    <h2 id="game2Header">Game 2</h2>
     <p>Tempo de reação: <span id="reactionTime2"><span></span></span></p>
     <p id="ClicouCedo"></p>
     <div id="divgame2" onclick="demasiadoCedoGame2()">
@@ -37,15 +35,17 @@
   </div>
 
 
-
-  <h2 id="game3Header">Game 3</h2>
-  <button onclick="makeSoundGame3()" id="startGame3">Start</button>
   <div id="game3">
+    <h2 id="game3Header">Game 3</h2>
     <p>Tempo de reação: <span id="reactionTime3"><span></span></span></p>
     <p id="ClicouCedo"></p>
     <div id="divgame3" onclick="demasiadoCedoGame3()">
       <div id="divbox3" onclick="divClickGame3()"></div>
     </div>
+  </div>
+
+  <div id="finish">
+    <h2>Games finished</h2>
   </div>
 
 

@@ -1,22 +1,25 @@
 var clickedTime, createdTime, reactionTime, JogoIniciado, timeOut;
 
-const btnGame2 = document.getElementById('startGame2');
-
-btnGame2.addEventListener('click', () => {
-  btnGame2.style.display = 'none';
-  document.getElementById('game2Header').style.display = "none";
-  const box = document.getElementById('game2');
-  box.style.display = 'block';
-});
 
 function makeboxGame2() {
-  JogoIniciado = new Date();
+  if (cont > 5) {
+    makeSoundGame3();
+  }
+  else {
+    const box1 = document.getElementById('game1');
+    box1.style.display = 'none';
 
-  randomBackground();
+    const box2 = document.getElementById('game2');
+    box2.style.display = 'block';
 
-  var random = getRandomArbitrary(3000, 7000);
-  console.log("Tempo até o som aparecer: " + random);
-  timeOut = setTimeout(mudaFundo, random);
+    JogoIniciado = new Date();
+
+    randomBackground();
+
+    var random = getRandomArbitrary(3000, 7000);
+    console.log("Tempo até a imagem mudar de cor: " + random);
+    timeOut = setTimeout(mudaFundo, random);
+  }
 }
 
 function randomBackground() {
@@ -52,6 +55,7 @@ function demasiadoCedoGame2() {
 }
 
 function divClickGame2() {
+  cont++;
   clickedTime = new Date();
   reactionTime = (clickedTime - createdTime) / 1000;
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");

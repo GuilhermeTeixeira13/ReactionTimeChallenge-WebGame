@@ -1,20 +1,27 @@
 var clickedTime, createdTime, reactionTime, timeOut, JogoIniciado;
 
-const btnGame3 = document.getElementById('startGame3');
-
-btnGame3.addEventListener('click', () => {
-  btnGame2.style.display = 'none';
-  document.getElementById('game3Header').style.display = "none";
-  const box = document.getElementById('game3');
-  box.style.display = 'block';
-});
 
 function makeSoundGame3() {
-  JogoIniciado = new Date();
+  if (cont > 8) {
+    const box3 = document.getElementById('game3');
+    box3.style.display = 'none';
 
-  var random = getRandomArbitrary(3000, 7000);
-  console.log("Tempo até o som aparecer: " + random);
-  timeOut = setTimeout(mostraSom, random);
+    const finished = document.getElementById('finish');
+    finished.style.display = 'block';
+  }
+  else {
+    const box2 = document.getElementById('game2');
+    box2.style.display = 'none';
+
+    const box3 = document.getElementById('game3');
+    box3.style.display = 'block';
+
+    JogoIniciado = new Date();
+
+    var random = getRandomArbitrary(3000, 7000);
+    console.log("Tempo até o som aparecer: " + random);
+    timeOut = setTimeout(mostraSom, random);
+  }
 }
 
 function mostraSom() {
@@ -28,6 +35,7 @@ function mostraSom() {
 }
 
 function divClickGame3() {
+  cont++;
   clickedTime = new Date();
   reactionTime = (clickedTime - createdTime) / 1000;
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
