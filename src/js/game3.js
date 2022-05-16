@@ -3,13 +3,19 @@ var clickedTime, createdTime, reactionTime, timeOut, JogoIniciado;
 const btnGame3 = document.getElementById('startGame3');
 
 btnGame3.addEventListener('click', () => {
-  btnGame2.style.display = 'none';
+  btnGame3.style.display = 'none';
   document.getElementById('game3Header').style.display = "none";
   const box = document.getElementById('game3');
   box.style.display = 'block';
 });
 
+function makeSoundGame3() {
+  JogoIniciado = new Date();
 
+  var random = getRandomArbitrary(3000, 7000);
+  console.log("Tempo até o som aparecer: " + random);
+  timeOut = setTimeout(mostraSom, random);
+}
 
 function mostraSom() {
   createdTime = new Date();
