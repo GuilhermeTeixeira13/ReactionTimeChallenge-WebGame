@@ -9,13 +9,7 @@ btnGame3.addEventListener('click', () => {
   box.style.display = 'block';
 });
 
-function makeSoundGame3() {
-  JogoIniciado = new Date();
 
-  var random = getRandomArbitrary(3000, 7000);
-  console.log("Tempo até o som aparecer: " + random);
-  timeOut = setTimeout(mostraSom, random);
-}
 
 function mostraSom() {
   createdTime = new Date();

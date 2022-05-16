@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Time Challenger - Classic</title>
+    <link rel="stylesheet" href="../css/game.css">
+</head>
+
+<body>
+    <h1>ReactionTimeChallenge</h1>
+
+
+    <h2 id="game1Header">Game 1</h2>
+    <button onclick="makeboxGame1()" id="startGame1">Start</button>
+    <div id="game1">
+        <p>Tempo de reação: <span id="reactionTime1"><span></span></span></p>
+        <p id="ClicouCedo"></p>
+        <div id="divgame1" onclick="demasiadoCedoGame1()">
+            <div id="divbox1" onclick="divClickGame1()"></div>
+        </div>
+    </div>
+
+    <script src="../js/game1.js"></script>
+</body>
+
+</html>
