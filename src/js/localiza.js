@@ -25,7 +25,8 @@ function displayLocation(latitude, longitude) {
           country = value[count - 1];
           state = value[count - 2];
           city = value[count - 3];
-          console.log(state);
+          const PostalCidade = state.split(" ");
+          console.log(PostalCidade[2]);
         }
         else {
           console.log("address not found");
