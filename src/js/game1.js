@@ -1,4 +1,5 @@
 var clickedTime = 0, createdTime, reactionTime, JogoIniciado, timeOut, cont = 0, random;
+const times = new Array();
 
 const btnGame1 = document.getElementById('startGame1');
 
@@ -73,6 +74,8 @@ function divClickGame1() {
   cont++;
   clickedTime = new Date();
   reactionTime = (clickedTime - createdTime) / 1000;
+  times.push(reactionTime);
+  console.log(times);
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
 
   document.getElementById("reactionTime1").innerHTML = reactionTime + "ms";

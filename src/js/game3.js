@@ -38,6 +38,8 @@ function divClickGame3() {
   cont++;
   clickedTime = new Date();
   reactionTime = (clickedTime - createdTime) / 1000;
+  times.push(reactionTime);
+  console.log(times);
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
 
   document.getElementById("reactionTime3").innerHTML = reactionTime + "ms";
@@ -56,7 +58,7 @@ function demasiadoCedoGame3() {
   if (ClickCedo - JogoIniciado != 0) { // Depois de o jogo é iniciado após se acertar na resposta, ClickCedo - JogoIniciado = 0, pois JogoIniciado > ClickCedo
     console.log("Clicou demasiado cedo.");
 
-    document.getElementById("ClicouCedo3  ").innerHTML = "Ciclou Cedo!!! -> Restarting";
+    document.getElementById("ClicouCedo3").innerHTML = "Ciclou Cedo!!! -> Restarting";
     setTimeout(mudaClicouCedo3, 2000);
 
     clearTimeout(timeOut);
