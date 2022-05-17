@@ -7,6 +7,9 @@ btnGame1.addEventListener('click', () => {
   btnGame1.style.display = 'none';
   const box = document.getElementById('game1');
   box.style.display = 'block';
+
+  const box2 = document.getElementById('gameHeader');
+  box2.style.display = 'block';
 });
 
 function makeboxGame1() {
@@ -54,7 +57,7 @@ function apareceFiguraNaTela() {
 }
 
 function mudaClicouCedo1() {
-  document.getElementById("ClicouCedo1").innerHTML = "Click on the figures as soon as you see them!";
+  document.getElementById("ClicouCedo1").innerHTML = "Game 1<br>Click on the figures as soon as you see them!";
 }
 
 function demasiadoCedoGame1() {
@@ -79,8 +82,16 @@ function divClickGame1() {
   console.log(times);
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
 
-  document.getElementById("ClicouCedo1").innerHTML = "Click on the figures as soon as you see them!";
-  document.getElementById("reactionTime").innerHTML = reactionTime + "ms";
+  document.getElementById("ClicouCedo1").innerHTML = "Game 1<br>Click on the figures as soon as you see them!";
+
+  if (cont == 1)
+    document.getElementById("Try1").innerHTML = "First try: " + reactionTime + "ms";
+  else if (cont == 2)
+    document.getElementById("Try2").innerHTML = "Second try: " + reactionTime + "ms";
+  else if (cont == 3)
+    document.getElementById("Try3").innerHTML = "Third try: " + reactionTime + "ms";
+
+
   document.getElementById("divbox1").style.display = 'none';
 
   makeboxGame1();

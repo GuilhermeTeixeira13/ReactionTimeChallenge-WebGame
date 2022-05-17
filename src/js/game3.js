@@ -6,6 +6,9 @@ function makeSoundGame3() {
     const box3 = document.getElementById('game3');
     box3.style.display = 'none';
 
+    const box4 = document.getElementById('gameHeader');
+    box4.style.display = 'none';
+
     const finished = document.getElementById('finish');
     finished.style.display = 'block';
   }
@@ -13,8 +16,11 @@ function makeSoundGame3() {
     const box2 = document.getElementById('game2');
     box2.style.display = 'none';
 
-    const box3 = document.getElementById('game3');
-    box3.style.display = 'block';
+    const box5 = document.getElementById('game3');
+    box5.style.display = 'block';
+
+    const box6 = document.getElementById('Game3Stats');
+    box6.style.display = 'block'
 
     JogoIniciado = new Date();
 
@@ -46,15 +52,20 @@ function divClickGame3() {
   console.log(times);
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
 
-  document.getElementById("ClicouCedo3").innerHTML = "Click on the board as soon as your hear the sound!";
-  document.getElementById("reactionTime").innerHTML = reactionTime + "ms";
-  document.getElementById("divbox3").style.display = 'none';
+  document.getElementById("ClicouCedo3").innerHTML = "Game 3<br>Click on the board as soon as your hear the sound!";
+  if (cont == 7)
+    document.getElementById("Try7").innerHTML = "First try: " + reactionTime + "ms";
+  else if (cont == 8)
+    document.getElementById("Try8").innerHTML = "Second try: " + reactionTime + "ms";
+  else if (cont == 9)
+    document.getElementById("Try9").innerHTML = "Third try: " + reactionTime + "ms";
 
+  document.getElementById("divbox3").style.display = 'none';
   makeSoundGame3();
 }
 
 function mudaClicouCedo3() {
-  document.getElementById("ClicouCedo3").innerHTML = "Click on the board as soon as your hear the sound!";
+  document.getElementById("ClicouCedo3").innerHTML = "Game 3<br>Click on the board as soon as your hear the sound!";
 }
 
 function demasiadoCedoGame3() {

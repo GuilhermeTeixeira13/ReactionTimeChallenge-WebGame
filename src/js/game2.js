@@ -12,6 +12,9 @@ function makeboxGame2() {
     const box2 = document.getElementById('game2');
     box2.style.display = 'block';
 
+    const box3 = document.getElementById('Game2Stats');
+    box3.style.display = 'block';
+
     JogoIniciado = new Date();
 
     randomBackground();
@@ -38,7 +41,7 @@ function mudaFundo() {
 }
 
 function mudaClicouCedo2() {
-  document.getElementById("ClicouCedo2").innerHTML = "Click on the board as soon as a new color appears!";
+  document.getElementById("ClicouCedo2").innerHTML = "Game 2<br>Click on the board as soon as a new color appears!";
 }
 
 function demasiadoCedoGame2() {
@@ -63,8 +66,13 @@ function divClickGame2() {
   console.log(times);;
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
 
-  document.getElementById("ClicouCedo2").innerHTML = "Click on the board as soon as a new color appears!";
-  document.getElementById("reactionTime").innerHTML = reactionTime + "ms";
+  document.getElementById("ClicouCedo2").innerHTML = "Game 2<br>Click on the board as soon as a new color appears!";
+  if (cont == 4)
+    document.getElementById("Try4").innerHTML = "First try: " + reactionTime + "ms";
+  else if (cont == 5)
+    document.getElementById("Try5").innerHTML = "Second try: " + reactionTime + "ms";
+  else if (cont == 6)
+    document.getElementById("Try6").innerHTML = "Third try: " + reactionTime + "ms";
   document.getElementById("divbox2").style.display = 'none';
 
   makeboxGame2();
