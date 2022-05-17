@@ -38,9 +38,9 @@ function randomshape() {
   document.getElementById("divbox1").style.borderRadius = randomBorderRadius + "px";
 
   var RandommarginLeft, RandommarginTop;
-  RandommarginLeft = getRandomArbitrary(0, 600);
+  RandommarginLeft = getRandomArbitrary(0, 700);
   RandommarginLeft = Math.floor(RandommarginLeft);
-  RandommarginTop = getRandomArbitrary(0, 300);
+  RandommarginTop = getRandomArbitrary(0, 500);
   RandommarginTop = Math.floor(RandommarginTop);
 
   document.getElementById("divbox1").style.marginTop = RandommarginTop + "px";
@@ -49,11 +49,12 @@ function randomshape() {
 
 function apareceFiguraNaTela() {
   createdTime = new Date();
+  document.getElementById("ClicouCedo1").innerHTML = "Click now!";
   document.getElementById("divbox1").style.display = 'block';
 }
 
 function mudaClicouCedo1() {
-  document.getElementById("ClicouCedo1").innerHTML = "";
+  document.getElementById("ClicouCedo1").innerHTML = "Click on the figures as soon as you see them!";
 }
 
 function demasiadoCedoGame1() {
@@ -62,7 +63,7 @@ function demasiadoCedoGame1() {
   if (ClickCedo - JogoIniciado < random && ClickCedo - JogoIniciado != 0) { // Depois de o jogo é iniciado após se acertar na resposta, ClickCedo - JogoIniciado = 0, pois JogoIniciado > ClickCedo
     console.log("Clicou demasiado cedo.");
 
-    document.getElementById("ClicouCedo1").innerHTML = "Ciclou Cedo!!! -> Restarting";
+    document.getElementById("ClicouCedo1").innerHTML = "To soon!!!<br>Restarting...";
     setTimeout(mudaClicouCedo1, 2000);
 
     clearTimeout(timeOut);
@@ -78,7 +79,8 @@ function divClickGame1() {
   console.log(times);
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
 
-  document.getElementById("reactionTime1").innerHTML = reactionTime + "ms";
+  document.getElementById("ClicouCedo1").innerHTML = "Click on the figures as soon as you see them!";
+  document.getElementById("reactionTime").innerHTML = reactionTime + "ms";
   document.getElementById("divbox1").style.display = 'none';
 
   makeboxGame1();

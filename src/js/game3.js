@@ -1,4 +1,4 @@
-var clickedTime, createdTime, reactionTime, timeOut, JogoIniciado;
+var clickedTime, createdTime, reactionTime, timeOut, JogoIniciado, audio;
 
 
 function makeSoundGame3() {
@@ -27,11 +27,12 @@ function makeSoundGame3() {
 function mostraSom() {
   createdTime = new Date();
 
-  var audio = new Audio('../sound/beep.mp3');
+  audio = new Audio('../sound/beep.mp3');
   audio.volume = 0.05;
   audio.play();
 
   document.getElementById("divbox3").style.display = 'block';
+  document.getElementById("ClicouCedo3").innerHTML = "Click now!";
 }
 
 function divClickGame3() {
@@ -39,17 +40,21 @@ function divClickGame3() {
   clickedTime = new Date();
   reactionTime = (clickedTime - createdTime) / 1000;
   times.push(reactionTime);
+  audio.pause();
+  audio.currentTime = 0;
+
   console.log(times);
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
 
-  document.getElementById("reactionTime3").innerHTML = reactionTime + "ms";
+  document.getElementById("ClicouCedo3").innerHTML = "Click on the board as soon as your hear the sound!";
+  document.getElementById("reactionTime").innerHTML = reactionTime + "ms";
   document.getElementById("divbox3").style.display = 'none';
 
   makeSoundGame3();
 }
 
 function mudaClicouCedo3() {
-  document.getElementById("ClicouCedo3").innerHTML = "";
+  document.getElementById("ClicouCedo3").innerHTML = "Click on the board as soon as your hear the sound!";
 }
 
 function demasiadoCedoGame3() {
@@ -58,10 +63,11 @@ function demasiadoCedoGame3() {
   if (ClickCedo - JogoIniciado != 0) { // Depois de o jogo é iniciado após se acertar na resposta, ClickCedo - JogoIniciado = 0, pois JogoIniciado > ClickCedo
     console.log("Clicou demasiado cedo.");
 
-    document.getElementById("ClicouCedo3").innerHTML = "Ciclou Cedo!!! -> Restarting";
+    document.getElementById("ClicouCedo3").innerHTML = "To soon!!!<br>Restarting...";
     setTimeout(mudaClicouCedo3, 2000);
 
     clearTimeout(timeOut);
+
     makeSoundGame3();
   }
 }

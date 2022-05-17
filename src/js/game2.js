@@ -33,11 +33,12 @@ function randomBackground() {
 
 function mudaFundo() {
   document.getElementById("divbox2").style.display = 'block';
+  document.getElementById("ClicouCedo1").innerHTML = "Click now!";
   createdTime = new Date();
 }
 
 function mudaClicouCedo2() {
-  document.getElementById("ClicouCedo2").innerHTML = "";
+  document.getElementById("ClicouCedo2").innerHTML = "Click on the board as soon as a new color appears!";
 }
 
 function demasiadoCedoGame2() {
@@ -46,7 +47,7 @@ function demasiadoCedoGame2() {
   if (ClickCedo - JogoIniciado != 0) { // Depois de o jogo é iniciado após se acertar na resposta, ClickCedo - JogoIniciado = 0, pois JogoIniciado > ClickCedo
     console.log("Clicou demasiado cedo.");
 
-    document.getElementById("ClicouCedo2").innerHTML = "Ciclou Cedo!!! -> Restarting";
+    document.getElementById("ClicouCedo2").innerHTML = "To soon!!!<br>Restarting...";
     setTimeout(mudaClicouCedo2, 2000);
 
     clearTimeout(timeOut);
@@ -62,7 +63,8 @@ function divClickGame2() {
   console.log(times);;
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
 
-  document.getElementById("reactionTime2").innerHTML = reactionTime + "ms";
+  document.getElementById("ClicouCedo2").innerHTML = "Click on the board as soon as a new color appears!";
+  document.getElementById("reactionTime").innerHTML = reactionTime + "ms";
   document.getElementById("divbox2").style.display = 'none';
 
   makeboxGame2();

@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Javascript - Exercício 5</title>
+  <title>REACTION TIME CHALLENGE</title>
   <meta charset="utf-8">
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,45 +12,65 @@
 </head>
 
 <body>
+  <div class="navbar">
+    <a href="game.html" id="title">REACTION TIME CHALLENGE</a>
+    <a href="#SIGN UP" id="sign">SIGN UP</a>
+    <a href="#LOGIN">LOGIN</a>
+  </div>
 
-  <h1>ReactionTimeChallenge</h1>
+  <div class="main">
 
-  <button onclick="makeboxGame1()" id="startGame1">Start Tests</button>
+    <button onclick="makeboxGame1()" id="startGame1">
+      REACTION TIME CHALLENGE
+      <p class="textoSecDoButton">3 attempts in each of 3 different game modes</p>
+      <p class="textoSecDoButton">Click anywhere to start.</p>
+    </button>
 
-  <div id="game1">
-    <h2 id="game1Header">Game 1</h2>
-    <p>Tempo de reação: <span id="reactionTime1"><span></span></span></p>
-    <p id="ClicouCedo1"></p>
-    <div id="divgame1" onclick="demasiadoCedoGame1()">
-      <div id="divbox1" onclick="divClickGame1()"></div>
+    <div id="gameHeader">
+      <h2>Game</h2>
+      <p>Tempo de reação: <span id="reactionTime"><span></span></span></p>
     </div>
-  </div>
 
 
-  <div id="game2">
-    <h2 id="game2Header">Game 2</h2>
-    <p>Tempo de reação: <span id="reactionTime2"><span></span></span></p>
-    <p id="ClicouCedo2"></p>
-    <div id="divgame2" onclick="demasiadoCedoGame2()">
-      <div id="divbox2" onclick="divClickGame2()"></div>
+    <div id="game1">
+      <p id="ClicouCedo1">Click on the figures as soon as you see them!</p>
+      <div id="divgame1" onclick="demasiadoCedoGame1()">
+        <div id="divbox1" onclick="divClickGame1()"></div>
+      </div>
     </div>
-  </div>
 
 
-  <div id="game3">
-    <h2 id="game3Header">Game 3</h2>
-    <p>Tempo de reação: <span id="reactionTime3"><span></span></span></p>
-    <p id="ClicouCedo3"></p>
-    <div id="divgame3" onclick="demasiadoCedoGame3()">
-      <div id="divbox3" onclick="divClickGame3()"></div>
+    <div id="game2">
+      <p id="ClicouCedo2">Click on the board as soon as a new color appears!</p>
+      <div id="divgame2" onclick="demasiadoCedoGame2()">
+        <div id="divbox2" onclick="divClickGame2()"></div>
+      </div>
     </div>
+
+
+    <div id="game3">
+      <p id="ClicouCedo3">Click on the board as soon as your hear the sound!</p>
+      <div id="divgame3" onclick="demasiadoCedoGame3()">
+        <div id="divbox3" onclick="divClickGame3()"></div>
+      </div>
+    </div>
+
+    <div id="finish">
+      <h2>Games finished</h2>
+    </div>
+
+    <div id="infos">
+      <div id="AboutTheTest">
+        <h3>About the test</h3>
+        <p>Bla Bla Bla</p>
+      </div>
+      <div id="Records">
+        <h3>Records</h3>
+        <p>Bla Bla Bla</p>
+      </div>
+    </div>
+
   </div>
-
-  <div id="finish">
-    <h2>Games finished</h2>
-  </div>
-
-
 
   <script src="../js/game1.js"></script>
   <script src="../js/game2.js"></script>
