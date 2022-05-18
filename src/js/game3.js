@@ -53,12 +53,19 @@ function divClickGame3() {
   console.log("O tempo de reação foi de -> " + reactionTime + "ms!");
 
   document.getElementById("ClicouCedo3").innerHTML = "Game 3<br>Click on the board as soon as your hear the sound!";
-  if (cont == 7)
-    document.getElementById("Try7").innerHTML = "First try: " + reactionTime + "ms";
-  else if (cont == 8)
-    document.getElementById("Try8").innerHTML = "Second try: " + reactionTime + "ms";
-  else if (cont == 9)
-    document.getElementById("Try9").innerHTML = "Third try: " + reactionTime + "ms";
+  const tryNo = document.getElementsByClassName("Try");
+  if (cont == 7) {
+    tryNo[6].innerHTML = "1º try: " + reactionTime + "ms";
+    tryNo[15].innerHTML = "1º try: " + reactionTime + "ms";
+  }
+  else if (cont == 8) {
+    tryNo[7].innerHTML = "2º try: " + reactionTime + "ms";
+    tryNo[16].innerHTML = "2º try: " + reactionTime + "ms";
+  }
+  else if (cont == 9) {
+    tryNo[8].innerHTML = "3º try: " + reactionTime + "ms";
+    tryNo[17].innerHTML = "3º try: " + reactionTime + "ms";
+  }
 
   document.getElementById("divbox3").style.display = 'none';
   makeSoundGame3();

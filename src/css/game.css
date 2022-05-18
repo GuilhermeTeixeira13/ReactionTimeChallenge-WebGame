@@ -191,6 +191,8 @@ span.psw {
 
 #finish {
   display: none;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 #gameHeader {

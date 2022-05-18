@@ -25,22 +25,24 @@
   <div id="id01" class="modal">
     <form class="modal-content animate" action="/action_page.php" method="post">
       <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
         <img src="../img/imglogin/img_avatar2.png" alt="Avatar" class="avatar">
       </div>
 
       <div class="container1">
         <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" placeholder="Enter Username" name="uname" required>
         <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="psw" required>
         <button type="submit">Login</button>
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me</label>
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancel</button>
         <span class="psw">Forgot <a href="#">password?</a></span>
       </div>
     </form>
@@ -58,21 +60,21 @@
     <div id="gameHeader">
       <div id="Game1Stats">
         <h2>Game 1</h2>
-        <p><span id="Try1"><span></span></span></p>
-        <p><span id="Try2"><span></span></span></p>
-        <p><span id="Try3"><span></span></span></p>
+        <p><span class="Try"><span></span></span></p>
+        <p><span class="Try"><span></span></span></p>
+        <p><span class="Try"><span></span></span></p>
       </div>
       <div id="Game2Stats">
         <h2>Game 2</h2>
-        <p><span id="Try4"><span></span></span></p>
-        <p><span id="Try5"><span></span></span></p>
-        <p><span id="Try6"><span></span></span></p>
+        <p><span class="Try"><span></span></span></p>
+        <p><span class="Try"><span></span></span></p>
+        <p><span class="Try"><span></span></span></p>
       </div>
       <div id="Game3Stats">
         <h2>Game 3</h2>
-        <p><span id="Try7"><span></span></span></p>
-        <p><span id="Try8"><span></span></span></p>
-        <p><span id="Try9"><span></span></span></p>
+        <p><span class="Try"><span></span></span></p>
+        <p><span class="Try"><span></span></span></p>
+        <p><span class="Try"><span></span></span></p>
       </div>
     </div>
 
@@ -101,7 +103,24 @@
 
 
     <div id="finish">
-      <h2>Games finished</h2>
+      <table border="1">
+        <tr>
+          <td colspan="3">Game 1</td>
+          <td colspan="3">Game 2</td>
+          <td colspan="3">Game 3</td>
+        </tr>
+        <tr>
+          <td class="Try"></td>
+          <td class="Try"></td>
+          <td class="Try"></td>
+          <td class="Try"></td>
+          <td class="Try"></td>
+          <td class="Try"></td>
+          <td class="Try"></td>
+          <td class="Try"></td>
+          <td class="Try"></td>
+        </tr>
+      </table>
     </div>
 
     <div id="infos">

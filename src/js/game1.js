@@ -84,12 +84,19 @@ function divClickGame1() {
 
   document.getElementById("ClicouCedo1").innerHTML = "Game 1<br>Click on the figures as soon as you see them!";
 
-  if (cont == 1)
-    document.getElementById("Try1").innerHTML = "First try: " + reactionTime + "ms";
-  else if (cont == 2)
-    document.getElementById("Try2").innerHTML = "Second try: " + reactionTime + "ms";
-  else if (cont == 3)
-    document.getElementById("Try3").innerHTML = "Third try: " + reactionTime + "ms";
+  const tryNo = document.getElementsByClassName("Try");
+  if (cont == 1) {
+    tryNo[0].innerHTML = "1º try: " + reactionTime + "ms";
+    tryNo[9].innerHTML = "1º try: " + reactionTime + "ms";
+  }
+  else if (cont == 2) {
+    tryNo[1].innerHTML = "2º try: " + reactionTime + "ms";
+    tryNo[10].innerHTML = "2º try: " + reactionTime + "ms";
+  }
+  else if (cont == 3) {
+    tryNo[2].innerHTML = "3º try: " + reactionTime + "ms";
+    tryNo[11].innerHTML = "3º try: " + reactionTime + "ms";
+  }
 
 
   document.getElementById("divbox1").style.display = 'none';
