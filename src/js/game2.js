@@ -69,16 +69,16 @@ function divClickGame2() {
   document.getElementById("ClicouCedo2").innerHTML = "Game 2<br>Click on the board as soon as a new color appears!";
   const tryNo = document.getElementsByClassName("Try");
   if (cont == 4) {
-    tryNo[3].innerHTML = "1º try: " + reactionTime + "ms";
-    tryNo[12].innerHTML = "1º try: " + reactionTime + "ms";
+    tryNo[3].innerHTML = "1º: " + reactionTime + "ms";
+    tryNo[12].innerHTML = reactionTime + "ms";
   }
   else if (cont == 5) {
-    tryNo[4].innerHTML = "2º try: " + reactionTime + "ms";
-    tryNo[13].innerHTML = "2º try: " + reactionTime + "ms";
+    tryNo[4].innerHTML = "2º: " + reactionTime + "ms";
+    tryNo[13].innerHTML = reactionTime + "ms";
   }
   else if (cont == 6) {
-    tryNo[5].innerHTML = "3º try: " + reactionTime + "ms";
-    tryNo[14].innerHTML = "3º try: " + reactionTime + "ms";
+    tryNo[5].innerHTML = "3º: " + reactionTime + "ms";
+    tryNo[14].innerHTML = reactionTime + "ms";
   }
   document.getElementById("divbox2").style.display = 'none';
 

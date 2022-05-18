@@ -11,6 +11,8 @@ function makeSoundGame3() {
 
     const finished = document.getElementById('finish');
     finished.style.display = 'block';
+
+    document.getElementById("avg").innerHTML = average(times).toFixed(3) + "ms";
   }
   else {
     const box2 = document.getElementById('game2');
@@ -55,16 +57,16 @@ function divClickGame3() {
   document.getElementById("ClicouCedo3").innerHTML = "Game 3<br>Click on the board as soon as your hear the sound!";
   const tryNo = document.getElementsByClassName("Try");
   if (cont == 7) {
-    tryNo[6].innerHTML = "1º try: " + reactionTime + "ms";
-    tryNo[15].innerHTML = "1º try: " + reactionTime + "ms";
+    tryNo[6].innerHTML = "1º: " + reactionTime + "ms";
+    tryNo[15].innerHTML = reactionTime + "ms";
   }
   else if (cont == 8) {
-    tryNo[7].innerHTML = "2º try: " + reactionTime + "ms";
-    tryNo[16].innerHTML = "2º try: " + reactionTime + "ms";
+    tryNo[7].innerHTML = "2º: " + reactionTime + "ms";
+    tryNo[16].innerHTML = reactionTime + "ms";
   }
   else if (cont == 9) {
-    tryNo[8].innerHTML = "3º try: " + reactionTime + "ms";
-    tryNo[17].innerHTML = "3º try: " + reactionTime + "ms";
+    tryNo[8].innerHTML = "3º: " + reactionTime + "ms";
+    tryNo[17].innerHTML = reactionTime + "ms";
   }
 
   document.getElementById("divbox3").style.display = 'none';
@@ -92,4 +94,16 @@ function demasiadoCedoGame3() {
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
+}
+
+function average(array) {
+  var total = 0;
+  var count = 0;
+
+  array.forEach(function (item, index) {
+    total += item;
+    count++;
+  });
+
+  return total / count;
 }

@@ -86,16 +86,16 @@ function divClickGame1() {
 
   const tryNo = document.getElementsByClassName("Try");
   if (cont == 1) {
-    tryNo[0].innerHTML = "1º try: " + reactionTime + "ms";
-    tryNo[9].innerHTML = "1º try: " + reactionTime + "ms";
+    tryNo[0].innerHTML = "1º: " + reactionTime + "ms";
+    tryNo[9].innerHTML = reactionTime + "ms";
   }
   else if (cont == 2) {
-    tryNo[1].innerHTML = "2º try: " + reactionTime + "ms";
-    tryNo[10].innerHTML = "2º try: " + reactionTime + "ms";
+    tryNo[1].innerHTML = "2º: " + reactionTime + "ms";
+    tryNo[10].innerHTML = reactionTime + "ms";
   }
   else if (cont == 3) {
-    tryNo[2].innerHTML = "3º try: " + reactionTime + "ms";
-    tryNo[11].innerHTML = "3º try: " + reactionTime + "ms";
+    tryNo[2].innerHTML = "3º: " + reactionTime + "ms";
+    tryNo[11].innerHTML = reactionTime + "ms";
   }
 
 
