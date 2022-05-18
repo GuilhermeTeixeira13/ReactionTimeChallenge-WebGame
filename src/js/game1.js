@@ -41,13 +41,13 @@ function randomshape() {
   document.getElementById("divbox1").style.borderRadius = randomBorderRadius + "px";
 
   var RandommarginLeft, RandommarginTop;
-  RandommarginLeft = getRandomArbitrary(0, 700);
+  RandommarginLeft = getRandomArbitrary(0, 87);
   RandommarginLeft = Math.floor(RandommarginLeft);
-  RandommarginTop = getRandomArbitrary(0, 500);
+  RandommarginTop = getRandomArbitrary(0, 43.5);
   RandommarginTop = Math.floor(RandommarginTop);
 
-  document.getElementById("divbox1").style.marginTop = RandommarginTop + "px";
-  document.getElementById("divbox1").style.marginLeft = RandommarginLeft + "px";
+  document.getElementById("divbox1").style.marginTop = RandommarginTop + "%";
+  document.getElementById("divbox1").style.marginLeft = RandommarginLeft + "%";
 }
 
 function apareceFiguraNaTela() {
