@@ -36,7 +36,7 @@ function randomBackground() {
 
 function mudaFundo() {
   document.getElementById("divbox2").style.display = 'block';
-  document.getElementById("ClicouCedo2").innerHTML = "Click now!";
+  document.getElementById("ClicouCedo2").innerHTML = "Click now!<br><br>";
   createdTime = new Date();
 }
 

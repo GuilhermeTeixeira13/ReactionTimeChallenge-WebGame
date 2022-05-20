@@ -1,4 +1,4 @@
-var clickedTime, createdTime, reactionTime, timeOut, JogoIniciado, audio;
+var clickedTime, createdTime, reactionTime, timeOut, JogoIniciado, audio, avg, cid;
 
 
 function makeSoundGame3() {
@@ -13,6 +13,12 @@ function makeSoundGame3() {
     finished.style.display = 'block';
 
     document.getElementById("avg").innerHTML = average(times).toFixed(3) + "ms";
+
+    avg = average(times).toFixed(3);
+    //window.location.href = "../php/average.php?avg=" + avg;
+
+    cid = document.getElementById("avg").innerHTML;
+    //window.location.href = "../php/average.php?city=" + cid;
   }
   else {
     const box2 = document.getElementById('game2');
@@ -40,7 +46,7 @@ function mostraSom() {
   audio.play();
 
   document.getElementById("divbox3").style.display = 'block';
-  document.getElementById("ClicouCedo3").innerHTML = "Click now!";
+  document.getElementById("ClicouCedo3").innerHTML = "Click now!<br><br>";
 }
 
 function divClickGame3() {

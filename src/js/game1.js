@@ -52,7 +52,7 @@ function randomshape() {
 
 function apareceFiguraNaTela() {
   createdTime = new Date();
-  document.getElementById("ClicouCedo1").innerHTML = "Click now!";
+  document.getElementById("ClicouCedo1").innerHTML = "Click now!<br><br>";
   document.getElementById("divbox1").style.display = 'block';
 }
 
