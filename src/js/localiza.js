@@ -26,12 +26,8 @@ function displayLocation(latitude, longitude) {
           state = value[count - 2];
           city = value[count - 3];
           const Cidade = state.split(" ");
-          console.log("sadasd");
-          console.log(" sad");
-          console.log("---" + Cidade[2]);
-          var cid = Cidade[2];
-          console.log("---" + cid);
-          document.getElementById("playingFrom").innerHTML = "Playing From: " + cid;
+          console.log(Cidade[2]);
+          document.getElementById("playingFrom").innerHTML = Cidade[2];
         }
         else {
           console.log("address not found");

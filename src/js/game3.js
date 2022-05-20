@@ -15,10 +15,8 @@ function makeSoundGame3() {
     document.getElementById("avg").innerHTML = average(times).toFixed(3) + "ms";
 
     avg = average(times).toFixed(3);
-    //window.location.href = "../php/average.php?avg=" + avg;
-
-    cid = document.getElementById("avg").innerHTML;
-    //window.location.href = "../php/average.php?city=" + cid;
+    cid = document.getElementById("playingFrom").innerHTML;
+    window.location.href = "../php/gravaRecord.php?city=" + cid + "&avg=" + avg;
   }
   else {
     const box2 = document.getElementById('game2');
