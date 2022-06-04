@@ -32,7 +32,8 @@ if(isset($_POST['uname']) && isset($_POST['password'])) {
             exit();
         }
     }else {
-        echo $result;
+        header("Location: game.php?error=Incorret Username or Password");
+        exit();
     }
     
 
