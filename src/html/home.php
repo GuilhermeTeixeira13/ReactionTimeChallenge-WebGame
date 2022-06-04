@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if(isset($_SESSION['id']) && isset($_SESSION['username']))  {
+
+
+?>
+
+
+
+
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
@@ -12,17 +24,14 @@
 <body>
   
   <div class="navbar">
-    <a href="game.html" id="title">REACTION TIME CHALLENGE</a>
-    <!-- Button to open the modal login form -->
-    <button onclick="document.getElementById('id01').style.display='block'" id="loginButton">LOGIN</button>
-    <button onclick="document.getElementById('id02').style.display='block'" id="signupButton">SIGN UP</button>
-    <button style="display: none;" onclick="document.getElementById('id03').style.display='block'" id="logOutButton">LOG OUT</button>
+    <a href="logout.php" id="title">LOG OUT</a>
+    <a id="username"><?php echo $_SESSION['name']; ?></a>
   </div>
 
   <!-- DIV LOGIN -->
 
   <div id="id01" class="loginmodal">
-    <form method="POST" class="loginmodal-content animate" action="#">
+    <form method="post" class="loginmodal-content animate" action="login.php">
       <div class="imgcontainer">
         <span onclick="document.getElementById('id01').style.display='none'" class="close"
           title="Close LoginModal">&times;</span>
@@ -30,10 +39,15 @@
       </div>
 
       <div class="container1">
+        <?php if(isset($_GET['error'])) { ?>
+          <p style = "color: red;   background-color: #F2DEDE; color: red; padding: 10px; width: 97.4%; border-radius: 5px;" class = "error">  <?php  echo $_GET['error']; ?> </p>
+        <?php } ?>
+      
+
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required>
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="password" required>
         <button type="submit">Login</button>
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me</label>
@@ -193,3 +207,11 @@
 </body>
 
 </html>
+
+<?php
+}else {
+    header("Location: game.php");
+    exit();
+}
+
+?>
