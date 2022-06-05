@@ -15,7 +15,6 @@ if(isset($_POST['uname']) && isset($_POST['password'])) {
         return $data;
     }
 
-
     $uname = validate($_POST['uname']);
     $password = validate($_POST['password']);
 
