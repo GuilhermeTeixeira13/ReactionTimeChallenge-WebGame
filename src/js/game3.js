@@ -1,5 +1,17 @@
 var clickedTime, createdTime, reactionTime, timeOut, JogoIniciado, audio, avg, cid;
 
+function createCookie(name, value, days) {
+  var expires;
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toGMTString();
+  }
+  else {
+    expires = "";
+  }
+  document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
+}
 
 function makeSoundGame3() {
   if (cont > 8) {
@@ -16,7 +28,17 @@ function makeSoundGame3() {
 
     avg = average(times).toFixed(3);
     cid = document.getElementById("playingFrom").innerHTML;
-    window.location.href = "../php/gravaRecord.php?city=" + cid + "&avg=" + avg;
+    createCookie("cid", cid, "10");
+    createCookie("avg", avg, "10");
+    //window.location.href = "../php/gravaRecord.php";
+    /*$(document).ready(function () {
+      $.ajax({
+        url: '../php/gravaRecord.php',
+        success: function (data) {
+          $('.result').html(data);
+        }
+      });
+    })*/
   }
   else {
     const box2 = document.getElementById('game2');
@@ -30,7 +52,7 @@ function makeSoundGame3() {
 
     JogoIniciado = new Date();
 
-    var random = getRandomArbitrary(3000, 7000);
+    var random = getRandomArbitrary(2000, 4000);
     console.log("Tempo até o som aparecer: " + random);
     timeOut = setTimeout(mostraSom, random);
   }

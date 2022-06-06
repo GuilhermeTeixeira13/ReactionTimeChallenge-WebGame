@@ -21,7 +21,7 @@ function makeboxGame1() {
 
     randomshape();
 
-    random = getRandomArbitrary(3000, 7000);
+    random = getRandomArbitrary(2000, 4000);
     console.log("Tempo até a figura aparecer: " + random);
     timeOut = setTimeout(apareceFiguraNaTela, random);
   }

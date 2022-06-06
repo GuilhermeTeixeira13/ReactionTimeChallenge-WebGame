@@ -19,7 +19,7 @@ function makeboxGame2() {
 
     randomBackground();
 
-    var random = getRandomArbitrary(3000, 7000);
+    var random = getRandomArbitrary(2000, 4000);
     console.log("Tempo até a imagem mudar de cor: " + random);
     timeOut = setTimeout(mudaFundo, random);
   }

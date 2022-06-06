@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/game.css">
   <script src="https://maps.google.com/maps/api/js?key=AIzaSyBKlv1WTb2TlKbEhNmGPoMhAQEcT3tchCk"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -98,7 +99,6 @@
     }
   </script>
 
-
   <div class="main">
 
     <button onclick="makeboxGame1()" id="startGame1">
@@ -173,7 +173,6 @@
       </table>
       <div id="statsFinais">
         <h1>Average reaction time: <span id="avg"></span></h1>
-        <h2 id="msgFinal"></h2>
       </div>
     </div>
 
@@ -184,7 +183,26 @@
       </div>
       <div id="Records">
         <h3>Records</h3>
-        <p>Bla Bla Bla</p>
+        <?php
+          include "../html/db_conn.php";
+
+          $getData = "SELECT Username, AvgTime, Localidade
+                      FROM records
+                      ORDER BY AvgTime ASC limit 10";
+
+          $result = $conn->query($getData);
+          if ($result->num_rows > 0) {
+            echo "<table>";
+            while($row = $result->fetch_assoc()) {
+              echo "<tr><td>" . $row["Username"]. "</td><td>" . $row["AvgTime"]. "</td><td>" . $row["Localidade"]. "</td></tr>";
+            }
+            echo "</table>";
+          } else {
+            echo "0 results";
+          }
+        
+          $conn->close();
+        ?>
       </div>
     </div>
   </div>

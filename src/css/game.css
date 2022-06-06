@@ -403,6 +403,10 @@ body {
   color: black;
 }
 
+#logOutRef {
+  float:right;
+}
+
 #title {
   margin-left: 14%;
 }

@@ -5,10 +5,6 @@ if(isset($_SESSION['Id']) && isset($_SESSION['Username'])) {
 
 ?>
 
-
-
-
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
@@ -182,7 +178,6 @@ if(isset($_SESSION['Id']) && isset($_SESSION['Username'])) {
       </table>
       <div id="statsFinais">
         <h1>Average reaction time: <span id="avg"></span></h1>
-        <h2 id="msgFinal"></h2>
       </div>
     </div>
 
@@ -193,7 +188,26 @@ if(isset($_SESSION['Id']) && isset($_SESSION['Username'])) {
       </div>
       <div id="Records">
         <h3>Records</h3>
-        <p>Bla Bla Bla</p>
+        <?php
+          include "../html/db_conn.php";
+
+          $getData = "SELECT Username, AvgTime, Localidade
+                      FROM records
+                      ORDER BY AvgTime ASC limit 10";
+
+          $result = $conn->query($getData);
+          if ($result->num_rows > 0) {
+            echo "<table>";
+            while($row = $result->fetch_assoc()) {
+              echo "<tr><td>" . $row["Username"]. "</td><td>" . $row["AvgTime"]. "</td><td>" . $row["Localidade"]. "</td></tr>";
+            }
+            echo "</table>";
+          } else {
+            echo "0 results";
+          }
+        
+          $conn->close();
+        ?>
       </div>
     </div>
   </div>
