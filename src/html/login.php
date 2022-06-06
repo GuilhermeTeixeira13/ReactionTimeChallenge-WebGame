@@ -16,7 +16,7 @@ if(isset($_POST['uname']) && isset($_POST['password'])) {
     }
 
     $uname = validate($_POST['uname']);
-    $password = validate($_POST['password']);
+    $password = validate(md5($_POST['password']));
 
     $sql = "SELECT * FROM users WHERE Username='$uname' AND Userpassword='$password'";
 

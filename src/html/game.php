@@ -46,20 +46,30 @@
       </div>
 
       <div class="container">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+        <button id ="cancelButtonSUp" type="button" onclick="document.getElementById('id01').style.display='none'"
           class="cancelbtn">Cancel</button>
+
         <span class="psw">Forgot <a href="#">password?</a></span>
       </div>
     </form>
   </div>
 
-  <!-- DIV LOGIN -->
+  <!-- DIV SIGN UP -->
 
   <div id="id02" class="modal">
     <span onclick="document.getElementById('id02').style.display='none'" class="close"
       title="Close Modal">&times;</span>
-    <formclass="modal-content" action="#">
+    <form method="post" class="modal-content" action="signup-check.php">
       <div class="container">
+        <?php if(isset($_GET['error'])) { ?>
+          <p style = "color: red;   background-color: #F2DEDE; color: red; padding: 10px; width: 97.4%; border-radius: 5px;" class = "error">  <?php  echo $_GET['error']; ?> </p>
+        <?php } ?>
+        <?php if(isset($_GET['success'])) { ?>
+          <p style = "color: rgb(0,128,0);  background-color: rgb(50,205,50); padding: 10px; width: 97.4%; border-radius: 5px;" class = "error">  <?php  echo $_GET['success']; ?> </p>
+        <?php } ?>
+
+
+
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>
         <hr>
@@ -212,6 +222,8 @@
   </div>
 
   <h7 id="playingFrom"></h7>
+
+
 
   <script src="../js/localiza.js"></script>
   <script src="../js/game1.js"></script>
