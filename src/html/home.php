@@ -177,7 +177,11 @@ if(isset($_SESSION['Id']) && isset($_SESSION['Username'])) {
         </tr>
       </table>
       <div id="statsFinais">
-        <h1>Average reaction time: <span id="avg"></span></h1>
+        <h1>Average reaction time: </h1>
+        <form action="../php/gravaRecord.php">
+          <input type="text" id="avg" name="avg" value="" readonly><br><br>
+          <input type="submit" value="Submit">
+        </form>
       </div>
     </div>
 

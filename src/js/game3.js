@@ -24,7 +24,7 @@ function makeSoundGame3() {
     const finished = document.getElementById('finish');
     finished.style.display = 'block';
 
-    document.getElementById("avg").innerHTML = average(times).toFixed(3) + "ms";
+    document.getElementById("avg").value = average(times).toFixed(3) + "ms";
 
     avg = average(times).toFixed(3);
     cid = document.getElementById("playingFrom").innerHTML;
