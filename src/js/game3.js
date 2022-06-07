@@ -30,15 +30,6 @@ function makeSoundGame3() {
     cid = document.getElementById("playingFrom").innerHTML;
     createCookie("cid", cid, "10");
     createCookie("avg", avg, "10");
-    //window.location.href = "../php/gravaRecord.php";
-    /*$(document).ready(function () {
-      $.ajax({
-        url: '../php/gravaRecord.php',
-        success: function (data) {
-          $('.result').html(data);
-        }
-      });
-    })*/
   }
   else {
     const box2 = document.getElementById('game2');

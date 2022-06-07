@@ -185,7 +185,8 @@
         <h1>Average reaction time: </h1>
         <form action="../php/gravaRecord.php" method="post">
           <input type="text" id="avg" name="avg" value="" readonly><br><br>
-          <input type="submit" value="Submit">
+          <input type="submit" class="submitButton" value="SUBMIT TO RECORDS">
+          <p>(The submission won't work if you are not logged in.)</p>
         </form>
       </div>
     </div>

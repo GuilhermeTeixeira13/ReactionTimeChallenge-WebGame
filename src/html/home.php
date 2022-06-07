@@ -19,7 +19,8 @@ if(isset($_SESSION['Id']) && isset($_SESSION['Username'])) {
 <body>
   
   <div class="navbar">
-    <a> <?php echo $_SESSION['Username']; ?></a>
+    <a href="home.php" id="title">REACTION TIME CHALLENGE</a>
+    <a id="userNameNavBar"> <?php echo $_SESSION['Username']; ?></a>
     <a  href="logout.php" id="logOutRef">LOG OUT</a>
   </div>
 
@@ -180,7 +181,8 @@ if(isset($_SESSION['Id']) && isset($_SESSION['Username'])) {
         <h1>Average reaction time: </h1>
         <form action="../php/gravaRecord.php">
           <input type="text" id="avg" name="avg" value="" readonly><br><br>
-          <input type="submit" value="Submit">
+          <input type="submit" class="submitButton" value="SUBMIT TO RECORDS">
+          <p>(The submission won't work if you are not logged in.)</p>
         </form>
       </div>
     </div>
