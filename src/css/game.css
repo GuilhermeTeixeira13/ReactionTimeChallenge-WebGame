@@ -468,8 +468,8 @@ body {
 #infos  #AboutTheTest {
   float: left;
   vertical-align: top;
-  width: 45%;
-  height: 90%;
+  width: 48%;
+  height: 75%;
   background-color: white;
   border-radius: 2%; 
 }
@@ -477,8 +477,8 @@ body {
 #infos #Records {
   float:right;
   vertical-align: top;
-  width: 45%;
-  height: 90%;
+  width: 48%;
+  height: 75%;
   background-color: white;
   border-radius: 2%;
 }
@@ -616,4 +616,45 @@ body {
 input.submitButton[type="submit"]:hover {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px #323C50;
   outline: 0;
+}
+
+
+#recordsTable {
+  background: #012B39;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+th {
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.65em 2em;
+  text-align: left;
+}
+td {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.65em 2em;
+}
+
+tbody tr {
+  transition: background 0.25s ease;
+}
+tbody tr:hover {
+  background: #014055;
+}
+
+#top1 {
+  background-color: rgb(146, 134, 62);
+}
+
+#top2 {
+  background-color: silver;
+}
+
+#top3 {
+  background-color: #6e5a46;
 }

@@ -207,10 +207,22 @@
 
           $result = $conn->query($getData);
           if ($result->num_rows > 0) {
-            echo "<table>";
+            echo "<table id='recordsTable'>";
+            echo "<thead><tr><th>Ranking</th><th>Username</th><th>Average Time</th><th>Localidade</th></tr></thead>";
+            echo "<tbody>";
+            $x = 0;
             while($row = $result->fetch_assoc()) {
-              echo "<tr><td>" . $row["Username"]. "</td><td>" . $row["AvgTime"]. "</td><td>" . $row["Localidade"]. "</td></tr>";
+              if($x == 0)
+                echo "<tr id='top1'><td>" . $x+1 . "º</td><td>" . $row["Username"]. "</td><td>" . $row["AvgTime"]. " ms</td><td>" . $row["Localidade"]. "</td></tr>";
+              else if($x == 1)
+                echo "<tr id='top2'><td>" . $x+1 . "º</td><td>" . $row["Username"]. "</td><td>" . $row["AvgTime"]. " ms</td><td>" . $row["Localidade"]. "</td></tr>"; 
+              else if($x == 2)
+                echo "<tr id='top3'><td>" . $x+1 . "º</td><td>" . $row["Username"]. "</td><td>" . $row["AvgTime"]. " ms</td><td>" . $row["Localidade"]. "</td></tr>";   
+              else
+                echo "<tr><td>" . $x+1 . "º</td><td>" . $row["Username"]. "</td><td>" . $row["AvgTime"]. " ms</td><td>" . $row["Localidade"]. "</td></tr>"; 
+              $x += 1;
             }
+            echo "</tbody>";
             echo "</table>";
           } else {
             echo "0 results";
