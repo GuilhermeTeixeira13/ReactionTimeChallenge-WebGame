@@ -182,7 +182,7 @@ if(isset($_SESSION['Id']) && isset($_SESSION['Username'])) {
         <form action="../php/gravaRecord.php">
           <input type="text" id="avg" name="avg" value="" readonly><br><br>
           <input type="submit" class="submitButton" value="SUBMIT TO RECORDS">
-          <p>(The submission won't work if you are not logged in.)</p>
+          <p id="advice">(The submission won't work if you are not logged in.)</p>
         </form>
       </div>
     </div>
@@ -223,9 +223,11 @@ if(isset($_SESSION['Id']) && isset($_SESSION['Username'])) {
           } else {
             echo "0 results";
           }
-        
           $conn->close();
         ?>
+        <form action="../php/pdf.php" method="POST">
+          <button type="submit" class="RecordsButton">SHOW ALL TIMES</button>
+        </form> 
       </div>
     </div>
   </div>
