@@ -21,8 +21,17 @@ if(isset($_POST['username']) && isset($_POST['psw']) && isset($_POST['psw-repeat
 
     $user_data = 'uname='. $uname;
     
-    if($pass !== $re_pass) {
-        header("Location: game.php?error=The confirmation password does not match&$user_data");
+    if(empty($uname)) {
+        header("Location: sign.php?error=Username is required");
+        exit();
+    }else if(empty($pass)) {
+        header("Location: sign.php?error=Password is required");
+        exit();
+    }else if(empty($re_pass)) {
+        header("Location: sign.php?error=Password is required");
+        exit();
+    }else if($pass !== $re_pass) {
+        header("Location: sign.php?error=The confirmation password does not match&$user_data");
         exit();
     }
 
@@ -34,23 +43,23 @@ if(isset($_POST['username']) && isset($_POST['psw']) && isset($_POST['psw-repeat
     $result = mysqli_query($conn, $sql);
 
     if(mysqli_num_rows($result) > 0) {
-        header("Location: game.php?error=The username already exists&$user_data");
+        header("Location: sign.php?error=The username already exists&$user_data");
         exit();
     }else {
         $sql2 = "INSERT INTO users(Username, Userpassword, Localidade) VALUES ('$uname', 
         '$pass', '$cit')";
         $result2 = mysqli_query($conn, $sql2);
         if($result2) {
-            header("Location: game.php?success=Your account has been created successfully");
+            header("Location: sign.php?success=Your account has been created successfully");
             exit();
         }else {
-            header("Location: game.php?error=unknown error occured&$user_data");
+            header("Location: sign.php?error=unknown error occured&$user_data");
             exit();
         }
     }
 
 } else {
-    header("Location: game.php");
+    header("Location: sign.php");
     exit();
 }
 

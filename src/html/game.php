@@ -14,100 +14,10 @@
   
   <div class="navbar">
     <a href="game.php" id="title">REACTION TIME CHALLENGE</a>
-    <!-- Button to open the modal login form -->
-    <button onclick="document.getElementById('id01').style.display='block'" id="loginButton">LOGIN</button>
-    <button onclick="document.getElementById('id02').style.display='block'" id="signupButton">SIGN UP</button>
-    <button style="display: none;" onclick="document.getElementById('id03').style.display='block'" id="logOutButton">LOG OUT</button>
+    <a  href="loginpage.php">LOGIN</a>
+    <a  href="sign.php">SIGN UP</a>
   </div>
 
-  <!-- DIV LOGIN -->
-
-  <div id="id01" class="loginmodal">
-    <form method="post" class="loginmodal-content animate" action="login.php">
-      <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-          title="Close LoginModal">&times;</span>
-        <img src="../img/imglogin/img_avatar2.png" alt="Avatar" class="avatar">
-      </div>
-
-      <div class="container1">
-        <?php if(isset($_GET['error'])) { ?>
-          <p style = "color: red;   background-color: #F2DEDE; color: red; padding: 10px; width: 97.4%; border-radius: 5px;" class = "error">  <?php  echo $_GET['error']; ?> </p>
-        <?php } ?>
-      
-
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me</label>
-      </div>
-
-      <div class="container">
-        <button id ="cancelButtonSUp" type="button" onclick="document.getElementById('id01').style.display='none'"
-          class="cancelbtn">Cancel</button>
-
-        <span class="psw">Forgot <a href="#">password?</a></span>
-      </div>
-    </form>
-  </div>
-
-  <!-- DIV SIGN UP -->
-
-  <div id="id02" class="modal">
-    <span onclick="document.getElementById('id02').style.display='none'" class="close"
-      title="Close Modal">&times;</span>
-    <form method="post" class="modal-content" action="signup-check.php">
-      <div class="container">
-        <?php if(isset($_GET['error'])) { ?>
-          <p style = "color: red;   background-color: #F2DEDE; color: red; padding: 10px; width: 97.4%; border-radius: 5px;" class = "error">  <?php  echo $_GET['error']; ?> </p>
-        <?php } ?>
-        <?php if(isset($_GET['success'])) { ?>
-          <p style = "color: rgb(0,128,0);  background-color: rgb(50,205,50); padding: 10px; width: 97.4%; border-radius: 5px;" class = "error">  <?php  echo $_GET['success']; ?> </p>
-        <?php } ?>
-
-
-
-        <h1>Sign Up</h1>
-        <p>Please fill in this form to create an account.</p>
-        <hr>
-        <label for="email"><b>Username</b></label>
-        <input type="text" placeholder="Enter Email" name="username" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-        <label>
-          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-        </label>
-
-        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-        <div class="clearfix">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'"
-            class="cancelbtn">Cancel</button>
-          <button type="submit" class="signupbtn">Sign Up</button>
-        </div>
-      </div>
-      </form>
-  </div>
-
-  <script>
-    // Get the modal
-    var modal = document.getElementById('id02');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
 
   <div class="main">
 
