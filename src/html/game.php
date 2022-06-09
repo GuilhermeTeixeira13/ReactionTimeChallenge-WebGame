@@ -104,7 +104,14 @@
     <div id="infos">
       <div id="AboutTheTest">
         <h3>About the test</h3>
-        <p>Bla Bla Bla</p>
+        <p>This is a simple tool to measure your reaction time.</p>
+        <p>In addition to measuring your reaction time, this test is affected by the latency of your computer and monitor. Using a fast computer and low latency / high framerate monitor will improve your score.</p>
+        <p>This test consists of a series of 3 games, in which you will have 3 attempts in each one.</p>
+        <p>In the first one, you will have to click on the figure that appears on the screen.</p>
+        <p>In the second, you will have to click on the canvas as soon as it changes color.</p>
+        <p>In the third, you will have to click on the canvas as soon as you hear a sound.</p>
+        <p>At the end of the test, you will get your average reaction time and you can submit it to our DataBase (if you are logged in).</p>
+        <p>If you're time is among the best 10, it will apear in the "Records", otherwise you can check your ranking by clicking in "SHOW ALL TIMES".</p>
       </div>
       <div id="Records">
         <h3>Records</h3>
