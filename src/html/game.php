@@ -14,8 +14,8 @@
   
   <div class="navbar">
     <a href="game.php" id="title">REACTION TIME CHALLENGE</a>
-    <a  href="loginpage.php">LOGIN</a>
-    <a  href="sign.php">SIGN UP</a>
+    <a href="loginpage.php" id="loginButton">LOGIN</a>
+    <a href="sign.php" id="signupButton">SIGN UP</a>
   </div>
 
 
