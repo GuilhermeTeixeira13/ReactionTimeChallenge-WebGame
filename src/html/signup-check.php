@@ -50,7 +50,8 @@ if(isset($_POST['username']) && isset($_POST['psw']) && isset($_POST['psw-repeat
         '$pass', '$cit')";
         $result2 = mysqli_query($conn, $sql2);
         if($result2) {
-            header("Location: sign.php?success=Your account has been created successfully");
+            $_SESSION['Username'] = $uname;
+            header("Location: home.php");
             exit();
         }else {
             header("Location: sign.php?error=unknown error occured&$user_data");
