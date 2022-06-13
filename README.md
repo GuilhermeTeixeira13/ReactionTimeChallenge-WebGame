@@ -1,18 +1,14 @@
-# ReactionTimeChallengePW
-Trabalho Prático da UC de PW da UBI. 
+# ReactionTimeChallenge-Game
 
-------------------------------------------------------------------------------------------------------
-## Login
+## Login and Register
 
+## DataBase for Users and For the records
 
-## Modos (3 Tentativas): 
-  Igual ao do AL.<br>
-  Fundo de alguma cor.<br>
-  Ao ouvir um som.
+## 3 Game modes (each played 3 times): 
+- Click on the figure that appears on the screen
+- Click on the canvas as soon as it changes color
+- Click on the canvas as soon as you hear a sound
 
-## Fornecer ao utilizador alguns dados estatisticos:
-  Histórico de tempos pessoais em determinado modo jogo.<br>
-  Classificação local do jogador (conta a melhor média), conforme a sua localização (Utilizando API 
-  permite saber a sua região).
-  
-------------------------------------------------------------------------------------------------------
+## Show people stats:
+- Top 10 best times, with record holder's region shown
+- PDF with the content of the DataBase (with all game results)
