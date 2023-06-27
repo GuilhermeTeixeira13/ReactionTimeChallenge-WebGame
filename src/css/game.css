@@ -142,26 +142,6 @@ body {
   font-size: 100%;
 }
 
-#infos {
-  text-align: center;
-  margin: 5% auto 5% auto;
-  width: 60%;
-  height: 50%;
-  background-color: rgb(230,232,244);
-  font-size: larger;
-  overflow:hidden;
-}
-
-#infos  #AboutTheTest {
-  float: left;
-  vertical-align: top;
-  width: 48%;
-  height: 75%;
-  background-color: white;
-  border-radius: 2%; 
-  overflow:hidden;
-}
-
 #ClicouCedo1, #ClicouCedo2, #ClicouCedo3 {
   margin-left: 28.7%;
   margin-top: 5%; 
@@ -303,10 +283,30 @@ input.submitButton[type="submit"]:hover {
   outline: 0;
 }
 
+#infos {
+  text-align: center;
+  margin: 5% auto 5% auto;
+  width: 75%;
+  height: 50%;
+  background-color: rgb(230,232,244);
+  font-size: larger;
+  overflow:hidden;
+}
+
+#infos #AboutTheTest {
+  float: left;
+  vertical-align: top;
+  width: 40%;
+  height: 75%;
+  background-color: white;
+  border-radius: 2%; 
+  overflow:hidden;
+}
+
 #infos #Records {
   float: right;
   vertical-align: top;
-  width: 48%;
+  width: 55%;
   height: 75%;
   background-color: white;
   border-radius: 2%;
