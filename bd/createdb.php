@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "reactiontimeweb.carkfyqrpaoi.eu-north-1.rds.amazonaws.com";
+$username = "admin";
+$password = "bTm5^Pq&9xS#R7";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 // Create database
-$sql = "CREATE DATABASE reactBD";
+$sql = "CREATE DATABASE reactiontimeweb";
 if ($conn->query($sql) === TRUE) {
   echo "Database created successfully";
 } else {

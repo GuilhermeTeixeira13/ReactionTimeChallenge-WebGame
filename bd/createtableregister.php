@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "reactBD";
+$servername = "reactiontimeweb.carkfyqrpaoi.eu-north-1.rds.amazonaws.com";
+$username = "admin";
+$password = "bTm5^Pq&9xS#R7";
+$dbname = "reactiontimeweb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
