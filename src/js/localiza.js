@@ -1,12 +1,16 @@
-navigator.geolocation.getCurrentPosition(
-  function (position) {
-    console.log(position.coords.latitude + " // " + position.coords.longitude);
-    displayLocation(position.coords.latitude, position.coords.longitude);
-  },
-  function errorCallback(error) {
-    console.log(error)
-  }
-);
+// Define the initMap function
+function initMap() {
+  // This function will be called once the Google Maps API has finished loading
+  navigator.geolocation.getCurrentPosition(
+    function (position) {
+      console.log(position.coords.latitude + " // " + position.coords.longitude);
+      displayLocation(position.coords.latitude, position.coords.longitude);
+    },
+    function errorCallback(error) {
+      console.log(error)
+    }
+  );
+}
 
 function displayLocation(latitude, longitude) {
   var geocoder;
@@ -18,24 +22,31 @@ function displayLocation(latitude, longitude) {
     function (results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         if (results[0]) {
-          var add = results[0].formatted_address;
-          var value = add.split(",");
+          var addressComponents = results[0].address_components;
+          var city;
 
-          count = value.length;
-          country = value[count - 1];
-          state = value[count - 2];
-          city = value[count - 3];
-          const Cidade = state.split(" ");
-          console.log(Cidade[2]);
-          document.getElementById("playingFrom").innerHTML = Cidade[2];
+          for (var i = 0; i < addressComponents.length; i++) {
+            var types = addressComponents[i].types;
+            if (types.includes('locality')) {
+              city = addressComponents[i].long_name;
+              break;
+            }
+          }
+
+          if (city) {
+            console.log(city);
+            document.getElementById("playingFrom").innerHTML = city;
+          } else {
+            console.log("City not found in address");
+          }
+        } else {
+          console.log("Address not found");
         }
-        else {
-          console.log("address not found");
-        }
-      }
-      else {
+      } else {
         console.log("Geocoder failed due to: " + status);
       }
     }
   );
 }
+
+

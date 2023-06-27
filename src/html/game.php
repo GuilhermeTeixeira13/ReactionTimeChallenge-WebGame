@@ -6,12 +6,13 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/game.css">
-  <script src="https://maps.google.com/maps/api/js?key=AIzaSyBKlv1WTb2TlKbEhNmGPoMhAQEcT3tchCk"></script>
+  <script src="../js/localiza.js"></script>
+  <script src="../js/cookies.js"></script>
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyBKlv1WTb2TlKbEhNmGPoMhAQEcT3tchCk&callback=initMap"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
-  
   <div class="navbar">
     <a href="game.php" id="title">REACTION TIME CHALLENGE</a>
     <a href="loginpage.php" id="loginButton">LOGIN</a>
@@ -91,8 +92,10 @@
           <td class="Try"></td>
         </tr>
       </table>
+
       <div id="statsFinais">
         <h1>Average reaction time: </h1>
+      
         <form action="../php/gravaRecord.php" method="post">
           <input type="text" id="avg" name="avg" value="" readonly><br><br>
           <input type="submit" class="submitButton" value="SUBMIT TO RECORDS">
@@ -155,9 +158,6 @@
 
   <h7 id="playingFrom"></h7>
 
-
-
-  <script src="../js/localiza.js"></script>
   <script src="../js/game1.js"></script>
   <script src="../js/game2.js"></script>
   <script src="../js/game3.js"></script>

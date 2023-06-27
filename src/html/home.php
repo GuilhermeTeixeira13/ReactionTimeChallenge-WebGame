@@ -1,8 +1,7 @@
 <?php
-session_start();
+  session_start();
 
-if(isset($_SESSION['Username'])) {
-
+  if(isset($_SESSION['Username'])) {
 ?>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -13,7 +12,9 @@ if(isset($_SESSION['Username'])) {
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/game.css">
-  <script src="https://maps.google.com/maps/api/js?key=AIzaSyBKlv1WTb2TlKbEhNmGPoMhAQEcT3tchCk"></script>
+  <script src="../js/cookies.js"></script>
+  <script src="../js/localiza.js"></script>
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyBKlv1WTb2TlKbEhNmGPoMhAQEcT3tchCk&callback=initMap"></script>
 </head>
 
 <body>
@@ -98,6 +99,7 @@ if(isset($_SESSION['Username'])) {
           <td class="Try"></td>
         </tr>
       </table>
+
       <div id="statsFinais">
         <h1>Average reaction time: </h1>
         <form action="../php/gravaRecord.php">
@@ -164,7 +166,6 @@ if(isset($_SESSION['Username'])) {
 
   <h7 id="playingFrom"></h7>
 
-  <script src="../js/localiza.js"></script>
   <script src="../js/game1.js"></script>
   <script src="../js/game2.js"></script>
   <script src="../js/game3.js"></script>
@@ -177,5 +178,4 @@ if(isset($_SESSION['Username'])) {
     header("Location: game.php");
     exit();
 }
-
 ?>

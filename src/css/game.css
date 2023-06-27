@@ -162,16 +162,6 @@ body {
   overflow:hidden;
 }
 
-#infos #Records {
-  float:right;
-  vertical-align: top;
-  width: 48%;
-  height: 75%;
-  background-color: white;
-  border-radius: 2%;
-  overflow:hidden;
-}
-
 #ClicouCedo1, #ClicouCedo2, #ClicouCedo3 {
   margin-left: 28.7%;
   margin-top: 5%; 
@@ -313,15 +303,28 @@ input.submitButton[type="submit"]:hover {
   outline: 0;
 }
 
+#infos #Records {
+  float: right;
+  vertical-align: top;
+  width: 48%;
+  height: 75%;
+  background-color: white;
+  border-radius: 2%;
+  overflow: hidden;
+}
 
 #recordsTable {
+  width: 90%; 
+  max-width: 90%; 
   background: #012B39;
   border-radius: 0.25em;
   border-collapse: collapse;
+  margin-top: 6%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 6%;
+  table-layout: fixed; /* Add this line to prevent stretching */
 }
+
 th {
   border-bottom: 1px solid #364043;
   color: #E2B842;
@@ -330,18 +333,22 @@ th {
   padding: 6% 4%;
   text-align: left;
 }
+
 td {
   color: #fff;
   font-weight: 400;
   padding: 0.65em 2em;
+  word-wrap: break-word; /* Optional: Allows long words to break and wrap within cells */
 }
 
 tbody tr {
   transition: background 0.25s ease;
 }
+
 tbody tr:hover {
   background: #014055;
 }
+
 
 #top1 {
   background-color: rgb(146, 134, 62);
