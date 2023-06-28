@@ -29,9 +29,7 @@ The main page provides an overview of the game and its mechanics. It includes a 
 
 To run the Reaction Time Challenge Game locally, follow these steps:
 
-1. Clone the repository to your local machine using the following command:
-
-git clone https://github.com/GuilhermeTeixeira13/ReactionTimeChallenge-Game.git
+1. Clone the repository to your local machine using the following command: `git clone https://github.com/GuilhermeTeixeira13/ReactionTimeChallenge-Game.git`
 
 2. Navigate to the project directory:
 
