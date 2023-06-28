@@ -23,7 +23,7 @@ Welcome to the Reaction Time Challenge Game! This web development project aims t
 
 ## Main Page
 
-The main page provides an overview of the game and its mechanics. It includes a brief explanation of how the game works. Additionally, you will find a table displaying the top ten best reaction times achieved by players. The table includes the user's name, their reaction time in milliseconds, and their city.
+The main page provides an overview of the game and its mechanics. It includes a brief explanation of how the game works. Additionally, you will find a table displaying the top ten best reaction times achieved by players. The table includes the user's name, their reaction time in milliseconds, and their city. If perhaps the user wants to see more than ten records, he can get a PDF file with all the times submited to the platform.
 
 ## Getting Started
 
